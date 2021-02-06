@@ -34,6 +34,7 @@ class PetsController < ApplicationController
     #@owners = Owner.all
     
     @pets = Pets.all
+    @owners = Owner.find_by_id(params[:id])
     
     erb :'/pets/edit'
   end
