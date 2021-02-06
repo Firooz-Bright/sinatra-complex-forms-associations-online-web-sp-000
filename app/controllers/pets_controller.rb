@@ -45,7 +45,7 @@ class PetsController < ApplicationController
        
 
        @pet = Pet.find(params[:id])
-      #  @pet.update(params["pet"]["name"])
+        @pet.update(params["pet"]["name"])
        @pet.name = params["pet"]["name"]
        if !params["owner"]["name"].empty?
         # @pet.owner.name = params["owner"]["name"]
