@@ -12,15 +12,7 @@ class PetsController < ApplicationController
 
   post '/pets' do 
     
-    @pet = Pet.create(params[:pet])
-    if !params[:owner][:name].emepty?
-       @pet.owner = Owner.create(name: params[:owner][:name])
-     else 
-        @pet.owner = Owner.find(params[:pet][:owner_id])
-      end 
-      @pet.save
-      
-    redirect to "pets/#{@pet.id}"
+   
   end
 
   get '/pets/:id' do 
