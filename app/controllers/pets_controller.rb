@@ -30,11 +30,10 @@ class PetsController < ApplicationController
 
   get '/pets/:id/edit' do
     
-   # @pet = Pet.find_by_id(params[:id])
-    #@owners = Owner.all
+    @pet = Pet.find_by_id(params[:id])
+    @owners = Owner.all
     
-    @pets = Pets.all
-    @owners = Owner.find_by_id(params[:id])
+   
     
     erb :'/pets/edit'
   end
