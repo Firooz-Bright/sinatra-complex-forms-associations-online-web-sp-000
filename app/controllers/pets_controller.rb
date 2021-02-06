@@ -45,7 +45,7 @@ class PetsController < ApplicationController
            
         end
         
-        @pet
+        @pet= Pet.find(params[:])
         
     redirect to "pets/#{@pet.id}"
     
