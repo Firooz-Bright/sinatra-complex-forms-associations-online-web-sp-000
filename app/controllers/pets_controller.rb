@@ -18,7 +18,8 @@ class PetsController < ApplicationController
     
     if ! Owner.find_by_id(params["pet"]["owner_id"])
        @pet.owner = Owner.create(name: params["owner"]["name"])
-    else 
+    else
+      
        @pet.owner = Owner.find_by_id(params["pet"]["owner_id"])
       
     end
