@@ -42,6 +42,7 @@ class PetsController < ApplicationController
       if !params[:pet].keys.include?("owner_id")
            params[:pet]["owner_id"] = []
         end
+        
     redirect to "pets/#{@pet.id}"
   end
 end
